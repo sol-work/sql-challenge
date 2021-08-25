@@ -34,3 +34,6 @@ select name, population from city where countrycode='JPN' order by population de
 
 update country set headofstate = 'Elizabeth II' where (headofstate='Elisabeth II');
 select name, code from country where headofstate='Elizabeth II';
+
+
+select name, population, surfacearea, (population/surfacearea) from country where (population/surfacearea) is not null and (population/surfacearea) > 0 order by (population/surfacearea) asc limit 10;
